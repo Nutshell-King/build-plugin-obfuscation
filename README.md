@@ -2,6 +2,8 @@
 
 本插件是对 javascript-obfuscator 库 4.1.0 版本的简单封装，以方便开发者在Cocos Creator 3.x 中更加便捷的对自己代码进行混淆。
 
+是从官方构建模板改的，有些代码没删干净，有强迫症的自己删👀
+
 ## 基本使用流程
 
 ![alt text](./img/image.png)
