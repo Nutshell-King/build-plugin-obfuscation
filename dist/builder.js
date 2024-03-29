@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.assetHandlers = exports.configs = exports.unload = exports.load = void 0;
-const path_1 = require("path");
 const global_1 = require("./global");
 const load = function () {
     console.debug(`${global_1.PACKAGE_NAME} load`);
@@ -48,11 +47,11 @@ const complexTestItems = {
 exports.configs = {
     '*': {
         hooks: './hooks',
-        // doc: join(__dirname, "../readme.md"),
+        doc: "https://github.com/Nutshell-King/build-plugin-obfuscation/blob/main/README.md",
         options: {
             doc: {
                 label: `i18n:${global_1.PACKAGE_NAME}.options.doc`,
-                default: (0, path_1.join)(__dirname, "../readme.md"),
+                default: "https://github.com/Nutshell-King/build-plugin-obfuscation/blob/main/README.md",
                 render: {
                     ui: 'ui-link',
                 },

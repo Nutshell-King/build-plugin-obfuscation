@@ -176,8 +176,8 @@ class Obfuscater {
         });
     }
     // 递归获取所有.js文件的地址
-    getAllJsFilePaths(folderPath, jsFilePaths = []) {
-        return __awaiter(this, void 0, void 0, function* () {
+    getAllJsFilePaths(folderPath_1) {
+        return __awaiter(this, arguments, void 0, function* (folderPath, jsFilePaths = []) {
             const files = yield (0, promises_1.readdir)(folderPath);
             for (const file of files) {
                 const filePath = (0, path_1.join)(folderPath, file);

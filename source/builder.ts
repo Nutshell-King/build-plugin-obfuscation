@@ -47,11 +47,11 @@ const complexTestItems = {
 export const configs: BuildPlugin.Configs = {
     '*': {
         hooks: './hooks',
-        // doc: join(__dirname, "../readme.md"),
+        doc: "https://github.com/Nutshell-King/build-plugin-obfuscation/blob/main/README.md",
         options: {
             doc: {
                 label: `i18n:${PACKAGE_NAME}.options.doc`,
-                default: join(__dirname, "../README.md"),
+                default: "https://github.com/Nutshell-King/build-plugin-obfuscation/blob/main/README.md",
                 render: {
                     ui: 'ui-link',
                 },
