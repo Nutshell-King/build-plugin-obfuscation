@@ -1,0 +1,26 @@
+module.exports = {
+	title: "混淆插件设置",
+	description: "一个简单易用的混淆插件(NutshellKing)",
+	ruleTest_msg: "填写字段不满足规则，请输入 'cocos'",
+	options: {
+		doc: "文档",
+		obConfigPath: "自定义混淆配置路径",
+		isObfuscate: "是否开启混淆",
+		obSelect: "混淆选项",
+		low: "轻度混淆",
+		medium: "中度混淆",
+		high: "高度混淆",
+		config: "自定义配置",
+
+		enterCocos: "请输入 'cocos' 字符 ",
+		remoteAddress: "资源服务地址",
+		selectTest: "select 选项测试",
+		selectTestOption1: "选项 （1）",
+		selectTestOption2: "选项 （2）",
+		objectTest: "Object 复合类型配置示例",
+		arrayTest: "Array 复合类型配置示例",
+		complexTestNumber: "Number",
+		complexTestBoolean: "Boolean",
+		complexTestString: "String",
+	},
+};
