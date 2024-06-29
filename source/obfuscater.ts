@@ -174,9 +174,10 @@ export default class Obfuscater {
             return;
         }
 
+        const execName = process.platform === 'win32' ? 'index.exe' : 'index';
         let result = await this.spawn(
             // toolsPath + "/index.exe",
-            join(pluginPath, toolsPath, "index.exe"),
+            join(pluginPath, toolsPath, execName),
             ["-p", folderPath, "-c", obfuscateConfigPath],
             {
                 env: {

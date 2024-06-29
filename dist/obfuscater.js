@@ -157,9 +157,10 @@ class Obfuscater {
                 console.error("配置文件不存在: ", obfuscateConfigPath);
                 return;
             }
+            const execName = process.platform === 'win32' ? 'index.exe' : 'index';
             let result = yield this.spawn(
             // toolsPath + "/index.exe",
-            (0, path_1.join)(pluginPath, toolsPath, "index.exe"), ["-p", folderPath, "-c", obfuscateConfigPath], {
+            (0, path_1.join)(pluginPath, toolsPath, execName), ["-p", folderPath, "-c", obfuscateConfigPath], {
                 env: Object.assign(Object.assign({}, process.env), { LANG: 'en_US.UTF-8' // 设置所需的字符编码
                  })
             });
@@ -176,8 +177,8 @@ class Obfuscater {
         });
     }
     // 递归获取所有.js文件的地址
-    getAllJsFilePaths(folderPath_1) {
-        return __awaiter(this, arguments, void 0, function* (folderPath, jsFilePaths = []) {
+    getAllJsFilePaths(folderPath, jsFilePaths = []) {
+        return __awaiter(this, void 0, void 0, function* () {
             const files = yield (0, promises_1.readdir)(folderPath);
             for (const file of files) {
                 const filePath = (0, path_1.join)(folderPath, file);
